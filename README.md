@@ -6,6 +6,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Storybook
+
+Install dependencies with `pnpm install`, then run `pnpm storybook` or
+`pnpm build-storybook`. Use pnpm consistently: mixing npm and pnpm
+installations in the same `node_modules` can cause ESLint plugin conflicts.
+
+Create React App uses TypeScript 4.9, while Storybook's types require a newer
+compiler and module resolution. Storybook checks the stories using
+`typescript-storybook` and `tsconfig.storybook.json`; the CRA configuration
+excludes story files.
+
+#### GitHub Pages
+
+Storybook will be published at
+https://hlopezluis.github.io/hola-storybook/ after each push to `main`.
+The workflow can also be started manually from the Actions tab. In the
+repository's **Settings → Pages**, select **GitHub Actions** as the source.
+The deployment uses Node.js 24 and pnpm 12.21.0 with the pnpm lockfile.
+
 ### `npm start`
 
 Runs the app in the development mode.\
